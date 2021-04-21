@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Put NMID Merchant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <form [formGroup]="frmgennmid" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">NMID</ion-label>
+        <ion-input formControlName="tnmid" type="text" [(ngModel)]="_nmid"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block" (click)="storeNMID()">Register NMID</ion-button>
+          <!-- <ion-button type="submit" color="danger" expand="block" (click)="getNativeHttpData()">View QRIS Native</ion-button> -->
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

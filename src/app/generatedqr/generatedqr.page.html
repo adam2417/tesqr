@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generated QRIS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <img src="../../assets/qris_logo.png" />
+    <ion-card *ngIf="allData">
+      <h3>{{ allData.nama_merchant }}</h3> 
+      <ion-card *ngIf="val">
+        <ngx-qrcode [value]='val'></ngx-qrcode>
+        <!-- <p>Value: {{ val }}</p> -->
+      </ion-card>
+      <p>{{ allData.nmid }}</p>
+      <p>Rp.{{ allData.nominal }}</p>
+      <p>{{ allData.nostruk }}</p>
+    </ion-card>
+  </div>
+</ion-content>

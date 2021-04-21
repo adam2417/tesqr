@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generate QRIS Dinamis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <form [formGroup]="frmgenqris" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">NMID</ion-label>
+        <ion-input type="text" formControlName="tnmid" [(ngModel)]="_nid"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Nominal (Rp. 100 - Rp. 2,000,000)</ion-label>
+        <ion-input type="text" formControlName="tnominal" [(ngModel)]="_nom"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Tips</ion-label>
+        <ion-input type="text" formControlName="ttips" [(ngModel)]="_tips"></ion-input>
+      </ion-item> 
+      <ion-item lines="full">
+        <ion-label position="floating">No.Struk (Optional)</ion-label>
+        <ion-input type="text" formControlName="tno_struk" [(ngModel)]="_nostruk"></ion-input>
+      </ion-item>         
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block" (click)="qrisGen()">View QRIS Standard</ion-button>
+          <!-- <ion-button type="submit" color="danger" expand="block" (click)="getNativeHttpData()">View QRIS Native</ion-button> -->
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+  
+</ion-content>
