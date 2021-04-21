@@ -1,0 +1,8 @@
+{
+  "name": "qrisnyopi",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
