@@ -13,9 +13,14 @@
         <ngx-qrcode [value]='val'></ngx-qrcode>
         <!-- <p>Value: {{ val }}</p> -->
       </ion-card>
-      <p>{{ allData.nmid }}</p>
-      <p>Rp.{{ allData.nominal }}</p>
-      <p>{{ allData.nostruk }}</p>
+      <p style="font-weight:bold">{{ allData.nmid }}</p>
+      <p style="font-weight:bold">Rp. {{ allData.nominal }}</p>
+      <p style="font-weight:bold">{{ allData.nostruk }}</p>
     </ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="storeNMID()">Kembali</ion-button>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
