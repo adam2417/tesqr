@@ -8,18 +8,18 @@
   <div align="center">
     <img src="../../assets/qris_logo.png" />
     <ion-card *ngIf="allData">
-      <h3>{{ allData.nama_merchant }}</h3> 
+      <h3 style="font-weight:bold">{{ allData.nama_merchant }}</h3> 
       <ion-card *ngIf="val">
         <ngx-qrcode [value]='val'></ngx-qrcode>
         <!-- <p>Value: {{ val }}</p> -->
       </ion-card>
       <p style="font-weight:bold">{{ allData.nmid }}</p>
-      <p style="font-weight:bold">Rp. {{ allData.nominal }}</p>
+      <p style="font-weight:bold">Rp.{{ allData.nominal }}</p>
       <p style="font-weight:bold">{{ allData.nostruk }}</p>
     </ion-card>
     <ion-row>
       <ion-col>
-        <ion-back-button defaultHref="/">Kembali</ion-back-button>
+        <ion-button type="submit" color="danger" expand="block" (click)="kembali()">Kembali</ion-button>
       </ion-col>
     </ion-row>
   </div>

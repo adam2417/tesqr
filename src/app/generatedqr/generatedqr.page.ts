@@ -12,7 +12,7 @@ export class GeneratedqrPage implements OnInit {
   allData:any;
   val:any;
 
-  constructor(private route: Router,private api:QrisapiService) { }
+  constructor(private route: Router,private api:QrisapiService,private router:Router) { }
 
   ngOnInit() {
     this.allData = this.api.getNavData();
@@ -20,4 +20,13 @@ export class GeneratedqrPage implements OnInit {
     this.val = this.allData.res;
   }
 
+  kembali() {
+    let d = {
+      'nmid' : this.allData['nmid'],
+      'nostruk' : this.allData['no_struk'],
+      'nominal' : this.allData['nominal'],
+    }
+    this.api.setNavData(d);
+    this.router.navigate(['generatedqr'])
+  }
 }
