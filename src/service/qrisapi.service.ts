@@ -12,11 +12,11 @@ export class QrisapiService {
   constructor(public http: HttpClient) { }
   
   getQrisGen(nmid,nominal,nostruk) {
-    return this.http.get('http://bankntt.co.id/qrcode/gen/indexj.php?nominal='+ nominal +'&nmid='+ nmid +'&no_struk='+ nostruk +'&submit=submit');
+    return this.http.get('https://bankntt.co.id/qrcode/gen/indexj.php?nominal='+ nominal +'&nmid='+ nmid +'&no_struk='+ nostruk +'&submit=submit');
   }
 
   getMerchantInfo(nmid) {
-    return this.http.get('http://bankntt.co.id/qrcode/gen/indexm.php?nmid='+ nmid +'&submit=submit');
+    return this.http.get('https://bankntt.co.id/qrcode/gen/indexm.php?nmid='+ nmid +'&submit=submit');
   }
 
   setNavData(navObj) {
