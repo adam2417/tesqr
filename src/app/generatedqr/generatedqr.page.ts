@@ -27,6 +27,6 @@ export class GeneratedqrPage implements OnInit {
       'nominal' : this.allData['nominal'],
     }
     this.api.setNavData(d);
-    this.router.navigate(['generatedqr'])
+    this.router.navigate(['genqris'])
   }
 }
