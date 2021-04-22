@@ -83,6 +83,9 @@ export class GenqrisPage implements OnInit {
         }
         this.api.setNavData(d);
         this.router.navigate(['generatedqr'])
+      } else {
+	this.info = this.allData['keterangan'];
+        this.showAlert('Pesan Kesalahan',this.info);
       }            
     });
 
@@ -91,5 +94,15 @@ export class GenqrisPage implements OnInit {
     /* if(this.allData['status'] == '00') {
       this.createdCode = this.allData['hasil'];
     } */
+  }
+
+  async showAlert(head,messages) {
+    const alert = await this.alertController.create({
+      header: head,
+      message: messages,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 }
